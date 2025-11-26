@@ -1,0 +1,1017 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maca Riva | Curso de Finanzas Personales Inteligentes</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #1a1a1a;
+            background-color: #fff;
+        }
+
+        /* Header */
+        header {
+            padding: 20px 40px;
+            background: #fff;
+            border-bottom: 1px solid #f0f0f0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
+            color: #1a1a1a;
+        }
+
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            padding: 80px 20px;
+            background: linear-gradient(180deg, #fff 0%, #fef8f3 100%);
+        }
+
+        .hero-image {
+            max-width: 600px;
+            width: 100%;
+            height: auto;
+            margin: 0 auto 40px;
+            border-radius: 20px;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: #1a1a1a;
+            line-height: 1.2;
+        }
+
+        .hero .subtitle {
+            font-size: 20px;
+            color: #666;
+            margin-bottom: 30px;
+            font-weight: 400;
+        }
+
+        .hero .description {
+            font-size: 18px;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto 40px;
+            line-height: 1.8;
+        }
+
+        .header-nav {
+            display: flex;
+            gap: 12px;
+            align-items: center;
+        }
+
+        .header-nav a {
+            color: #555;
+            text-decoration: none;
+            padding: 10px 14px;
+            border-radius: 10px;
+            font-weight: 600;
+            transition: all 0.18s ease;
+            background: transparent;
+        }
+
+        .header-nav a:hover {
+            background: #ff6b35;
+            color: #fff;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 18px rgba(255,107,53,0.14);
+        }
+
+        @media (max-width: 768px) {
+            header {
+                padding: 16px;
+            }
+
+            .header-nav {
+                gap: 8px;
+            }
+
+            .header-nav a {
+                padding: 8px 10px;
+                font-size: 14px;
+            }
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: #ff6b35;
+            color: #fff;
+            padding: 18px 45px;
+            font-size: 18px;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+
+        .cta-button:hover {
+            background: #e55a2b;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(255, 107, 53, 0.3);
+        }
+
+        /* Pain Points Section */
+        .pain-section {
+            text-align: center;
+            padding: 80px 20px;
+            background: #b8b4ff;
+            
+        }
+
+        .pain-section h2 {
+            font-size: 36px;
+            font-weight: 700;
+            margin-bottom: 30px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #fff;
+        }
+
+        .pain-section p {
+            font-size: 20px;
+            color: #1a1a1a;
+            max-width: 900px;
+            margin: 0 auto 30px;
+            line-height: 1.8;
+        }
+
+        .highlight-text {
+            font-size: 22px;
+            font-weight: 600;
+            color: #1a1a1a;
+            max-width: 800px;
+            margin: 40px auto;
+            line-height: 1.6;
+        }
+
+        /* Benefits Grid */
+        .benefits {
+            text-align:center;
+            padding: 80px 20px;
+            background: #fef8f3;
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .benefit-card {
+            background: #fff;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            text-align: center;
+        }
+
+        .benefit-card h3 {
+            font-size: 22px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: #1a1a1a;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .benefit-card ul {
+            list-style: none;
+            text-align: left;
+        }
+
+        .benefit-card li {
+            font-size: 16px;
+            color: #555;
+            margin-bottom: 12px;
+            padding-left: 25px;
+            position: relative;
+        }
+
+        .benefit-card li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #ff6b35;
+            font-weight: 700;
+        }
+
+        /* Question Section */
+        .question-section {
+            text-align: center;
+            padding: 80px 20px;
+            background: #ebf86c;
+        }
+
+        .question-section h2 {
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 30px;
+            text-transform: uppercase;
+        }
+
+        .question-section p {
+            font-size: 20px;
+            color: #555;
+            max-width: 900px;
+            margin: 0 auto 30px;
+            line-height: 1.8;
+        }
+
+        .question-highlight {
+            font-size: 20px;
+            font-weight: 600;
+            color: #1a1a1a;
+            margin-top: 40px;
+        }
+
+        /* Image with CTA Section */
+        .image-cta-section {
+            padding: 80px 20px;
+            background: #fef8f3;
+            text-align: center;
+        }
+
+        .image-cta-section img {
+            max-width: 500px;
+            width: 100%;
+            height: auto;
+            border-radius: 20px;
+            margin-bottom: 40px;
+        }
+
+        /* Testimonials */
+        .testimonials {
+            padding: 80px 20px;
+            background: #b8b4ff;
+        }
+
+        .testimonials h2 {
+            text-align: center;
+            font-size: 36px;
+            font-weight: 700;
+            margin-bottom: 60px;
+            color: #fff;
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .testimonial-card {
+            background: #fef8f3;
+            padding: 30px;
+            border-radius: 15px;
+            font-size: 16px;
+            color: #1a1a1a;
+            line-height: 1.8;
+        }
+
+        .testimonial-card .stars {
+            color: #ffcf33;
+            font-size: 20px;
+            margin-bottom: 12px;
+            letter-spacing: 2px;
+        }
+
+        .testimonial-card p {
+            margin: 0 0 12px 0;
+        }
+
+        .testimonial-author {
+            font-size: 14px;
+            color: #1a1a1a;
+        }
+
+        /* Features Section */
+        .features {
+            padding: 80px 20px;
+            background: #fef8f3;
+        }
+
+        .features h2 {
+            text-align: center;
+            font-size: 36px;
+            font-weight: 700;
+            margin-bottom: 60px;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .feature-card {
+            background: #fff;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            text-align: center;
+        }
+
+        .feature-icon {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+
+        .feature-card h3 {
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+        }
+
+        .feature-card p {
+            font-size: 16px;
+            color: #555;
+            line-height: 1.8;
+        }
+
+        /* Course Content */
+        .course-content {
+            padding: 80px 20px;
+            background: #ebf86c;
+            text-align: center;
+        }
+
+        .course-content h2 {
+            font-size: 40px;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .course-content .intro {
+            font-size: 20px;
+            color: #555;
+            max-width: 900px;
+            margin: 0 auto 60px;
+            line-height: 1.8;
+        }
+
+        .modules-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto 40px;
+        }
+
+        .module-card {
+            background: #fef8f3;
+            padding: 30px;
+            border-radius: 15px;
+            text-align: left;
+        }
+
+        .module-card h3 {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            color: #ff6b35;
+        }
+
+        .module-card p {
+            font-size: 16px;
+            color: #555;
+            line-height: 1.6;
+        }
+
+        /* Access Info */
+        .access-info {
+            padding: 80px 20px;
+            background: #fef8f3;
+            text-align: center;
+        }
+
+        .access-info h2 {
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 30px;
+            text-transform: uppercase;
+        }
+
+        .access-info p {
+            font-size: 18px;
+            color: #555;
+            max-width: 900px;
+            margin: 0 auto 40px;
+            line-height: 1.8;
+        }
+
+        /* For You Section */
+        .for-you {
+            padding: 80px 20px;
+            background: #fff;
+        }
+
+        .for-you h2 {
+            text-align: center;
+            font-size: 36px;
+            font-weight: 700;
+            margin-bottom: 60px;
+            text-transform: lowercase;
+        }
+
+        .for-you-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 40px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .for-you-card {
+            padding: 40px;
+            border-radius: 15px;
+        }
+
+        .for-you-card.yes {
+            background: #e8f5e9;
+        }
+
+        .for-you-card.no {
+            background: #ffebee;
+        }
+
+        .for-you-card h3 {
+            font-size: 22px;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .for-you-card ul {
+            list-style: none;
+        }
+
+        .for-you-card li {
+            font-size: 16px;
+            color: #555;
+            margin-bottom: 12px;
+            padding-left: 25px;
+            position: relative;
+        }
+
+        .for-you-card.yes li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #4caf50;
+            font-weight: 700;
+        }
+
+        .for-you-card.no li:before {
+            content: "✗";
+            position: absolute;
+            left: 0;
+            color: #f44336;
+            font-weight: 700;
+        }
+
+        /* Bonuses */
+        .bonuses {
+            padding: 80px 20px;
+            background: #fef8f3;
+            text-align: center;
+        }
+
+        .bonuses img {
+            max-width: 600px;
+            width: 100%;
+            height: auto;
+            margin-bottom: 40px;
+            border-radius: 20px;
+        }
+
+        .bonuses h2 {
+            font-size: 36px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+
+        .bonuses .value {
+            font-size: 22px;
+            color: #ff6b35;
+            font-weight: 700;
+            margin-bottom: 40px;
+        }
+
+        .bonus-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto 40px;
+        }
+
+        .bonus-card {
+            background: #fff;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+        }
+
+        .bonus-card h3 {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 15px;
+            color: #1a1a1a;
+        }
+
+        .bonus-card p {
+            font-size: 15px;
+            color: #555;
+            line-height: 1.6;
+        }
+
+        /* Certificate */
+        .certificate {
+            padding: 80px 20px;
+            background: #fff;
+            text-align: center;
+        }
+
+        .certificate h2 {
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 40px;
+            text-transform: uppercase;
+        }
+
+        .certificate-images {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .certificate-images img {
+            max-width: 450px;
+            width: 100%;
+            height: auto;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        /* Pricing */
+        .pricing {
+            padding: 80px 20px;
+            background: #fef8f3;
+            text-align: center;
+        }
+
+        .pricing h2 {
+            font-size: 36px;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .pricing .price-highlight {
+            font-size: 28px;
+            font-weight: 700;
+            color: #ff6b35;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+
+        .pricing p {
+            font-size: 18px;
+            color: #555;
+            margin-bottom: 40px;
+        }
+
+        .payment-methods {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-bottom: 40px;
+        }
+
+        .payment-methods img {
+            width: 80px;
+            height: auto;
+        }
+
+        /* Guarantee */
+        .guarantee {
+            padding: 80px 20px;
+            background: #fff;
+            text-align: center;
+        }
+
+        .guarantee p {
+            font-size: 20px;
+            color: #555;
+            max-width: 900px;
+            margin: 0 auto 40px;
+            line-height: 1.8;
+        }
+
+        /* About */
+        .about {
+            padding: 80px 20px;
+            background: #fef8f3;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 60px;
+            flex-wrap: wrap;
+        }
+
+        .about img {
+            max-width: 400px;
+            width: 100%;
+            height: auto;
+            border-radius: 20px;
+        }
+
+        .about-content {
+            max-width: 600px;
+        }
+
+        .about-content h2 {
+            font-size: 36px;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .about-content p {
+            font-size: 18px;
+            color: #555;
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+
+        /* Final CTA */
+        .final-cta {
+            padding: 80px 20px;
+            background: #fff;
+            text-align: center;
+        }
+
+        .final-cta h2 {
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 40px;
+        }
+ .final-cta {
+            padding: 80px 20px;
+            background: #fff;
+            text-align: center;
+        }
+
+        .final-cta h2 {
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 40px;
+        }
+
+        /* Footer */
+        .footer {
+            background: #fff;
+            border-top: 1px solid #f0f0f0;
+            padding: 40px 20px;
+            color: #555;
+        }
+
+        .footer-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            gap: 20px;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .footer .logo {
+            font-size: 18px;
+            font-weight: 800;
+            color: #1a1a1a;
+        }
+
+        .footer-nav {
+            display: flex;
+            gap: 18px;
+            flex-wrap: wrap;
+        }
+
+        .footer-nav a {
+            color: #555;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .footer-contact {
+            font-size: 14px;
+            text-align: right;
+        }
+
+        .social-links a {
+            margin-left: 10px;
+            font-size: 18px;
+            text-decoration: none;
+            color: #555;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            margin-top: 18px;
+            font-size: 13px;
+            color: #9a9a9a;
+        }
+
+        /* Responsive footer */
+        @media (max-width: 768px) {
+            .footer-inner {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .footer-contact {
+                text-align: center;
+            }
+        }
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 32px;
+            }
+
+            .hero .subtitle {
+                font-size: 18px;
+            }
+
+            .pain-section h2,
+            .testimonials h2,
+            .features h2 {
+                font-size: 28px;
+            }
+
+            .for-you-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .about {
+                text-align: center;
+            }
+            
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo">MACA RIVA</div>
+
+        <nav class="header-nav" aria-label="Navegación principal">
+            <a href="#benefits">Beneficios</a>
+            <a href="#course-content">Contenido</a>
+            <a href="#testimonials">Testimonios</a>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <img src="https://cdn.prod.website-files.com/673e35c763cbcdf35692ff7e/678535d4f1b3a568b76f6498_fpi-maca.avif" alt="Finanzas Personales Inteligentes" class="hero-image">
+        <h1>Finanzas Personales Inteligentes 2.0</h1>
+        <p class="subtitle">¿Mi promesa? Que abrir el estado de cuenta te de paz, no preocupación.</p>
+        <p class="description">El curso MÁS COMPLETO de finanzas del mercado.<br>
+        Aprende cómo incrementar tus ingresos, a gastar con consciencia, a ahorrar, a invertir, a construir un patrimonio sólido y lograr tener PAZ financiera.</p>
+        <a href="https://www.google.com/" class="cta-button">Quiero el curso</a>
+    </section>
+
+    <!-- Pain Points -->
+    <section class="pain-section">
+        <h2>Sé que te sientes estancado Y ESTRESADO CON tus FINANZAS...</h2>
+        <p>Que tienes un ingreso fijo estable pero no logras realmente abrir el estado de cuenta con absoluta paz y ver cómo poco a poco aumentas tu riqueza y tus ingresos pasivos.</p>
+        <p class="highlight-text">Invierte 6 semanas de aprendizaje y 6 meses de práctica para vivir con paz financiera.</p>
+        <p class="highlight-text">Esperaste 2 años a que ese fuckboy cambiara, puedes dedicarle 6 semanas a tener unas finanzas saludables.</p>
+    </section>
+
+    <!-- Benefits Grid -->
+    <section id="benefits" class="benefits">
+        <h1>¿ESTE CURSO ES PARA MI?</h1>
+        <h1>  SI  </h1>
+        <div class="benefits-grid">
+            <div class="benefit-card">
+                <h3>ES PARA TI, SI:</h3>
+                <ul>
+                    <li>Buscas tomar el control de tus finanzas sin complicaciones técnicas</li>
+                    <li>Deseas ahorrar e invertir de manera efectiva para alcanzar tus metas</li>
+                    <li>Aspiras a diversificar ingresos y no depender solo de un salario</li>
+                    <li>Quieres usar tus tarjetas y recursos de forma más inteligente</li>
+                </ul>
+            </div>
+            <div class="benefit-card">
+                <h3>NO ES PARA TI, SI</h3>
+                <ul>
+                    <li>Buscas soluciones rápidas para enriquecerte sin esfuerzo</li>
+                    <li>No tienes estabilidad laboral o interés en planificar a futuro</li>
+                    <li>Ya tienes conocimientos avanzados y buscas estrategias complejas</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Question Section -->
+    <section  class="question-section">
+        <h2>Si hoy TE QUEDARAS SIN trabajo</h2>
+        <h2>¿Estarías tranquilA?</h2>
+        <p>¿Podrías darte el tiempo de elegir un nuevo trabajo, buscar nuevos proyectos, iniciar un nuevo negocio, tomarte un descanso o priorizarte sin poner en riesgo tu patrimonio?</p>
+        <p class="question-highlight">El dinero no tiene que ser un obstáculo, si no una herramienta para construir la vida que realmente deseas.</p>
+        <a href="https://www.google.com/" class="cta-button">Quiero el curso</a>
+    </section>
+
+    <!-- Image with CTA -->
+    <section class="image-cta-section">
+        <img src="https://cdn.prod.website-files.com/673e35c763cbcdf35692ff7e/673e86a74318f67bbe91edd4_maca-riva-main-photo.avif" alt="Maca Riva">
+
+        <div class="benefits-grid">
+            <div class="benefit-card">
+                <h3>Controla tus finanzas de forma simple</h3>
+                <ul>
+                    <li>Organiza tus ingresos y gastos de forma clara y efectiva en una misma plantilla</li>
+                    <li>Evita la incertidumbre financiera</li>
+                    <li>Reduce el estrés y la ansiedad relacionados con el dinero</li>
+                    <li>Crea el hábito de ahorrar</li>
+                    <li>Define objetivos claros y alcanza metas específicas de patrimonio</li>
+                </ul>
+            </div>
+            <div class="benefit-card">
+                <h3>Evita la incertidumbre financiera</h3>
+                <ul>
+                    <li>Entiende en qué deberías estar fijándote para tomar una decisión de inversión.</li>
+                    <li>Haz crecer tu riqueza de forma sostenible</li>
+                    <li>Asegura tu estabilidad financiera a largo plazo</li>
+                </ul>
+            </div>
+            <div class="benefit-card">
+                <h3>Vive en paz y elige con libertad</h3>
+                <ul>
+                    <li>Toma decisiones financieras por elección, no por obligación</li>
+                    <li>Haz que el dinero trabaje por ti y pasa más tiempo en familia</li>
+                    <li>Trabaja por tiempo y no por dinero</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section id="testimonials" class="testimonials">
+        <h2>¿Qué es lo que más le ha gustado a la comunidad?</h2>
+        <div class="testimonials-grid">
+            <div class="testimonial-card">
+                <div class="stars" aria-hidden="true">★★★★★</div>
+                <p>La estructura del curso y la explicacion en cada capitulo es didactica y muy comprensible, me gusta la manera que tiene Maca para ayudarme comprender los conceptos y la forma como hace que aterricemos en la realidad respecto a lo que previo al curso creia correcto.</p>
+                <div class="testimonial-author"><strong>— Valentina Ramirez</strong></div>
+            </div>
+            <div class="testimonial-card">
+                <div class="stars" aria-hidden="true">★★★★★</div>
+                <p>Que es ligero de entender que maca utiliza palabras ejemplos etc aterrizado a los mortales que no somos expertos en finanzas</p>
+                <div class="testimonial-author"><strong> Enzo Castañeda</strong></div>
+            </div>
+            <div class="testimonial-card">
+                <div class="stars" aria-hidden="true">★★★★★</div>
+                <p>Me gustó mucho la forma de explicar cada uno de los conceptos, ya que fue muy intuitiva y fácil de entender. Me encantó que los videos fueran cortos, ya que, aunque perdiera la atención, podía volver fácilmente al video y no tener que repetir algo de más de 20 minutos.</p>
+                <div class="testimonial-author"><strong> Laura Ciccia</strong></div>
+            </div>
+            <div class="testimonial-card">
+                <div class="stars" aria-hidden="true">★★★★★</div>
+                <p>Me gustó mucho la manera en la que iban liberando los módulos, porque eso me permitió avanzar paso a paso sin sentirme abrumado. Además, el lenguaje simple que usaban hacía que cada tema fuera fácil de entender, incluso los conceptos más técnicos.</p>
+                <div class="testimonial-author"><strong> Andrea Marín </strong></div>
+            </div>
+            <div class="testimonial-card">
+                <div class="stars" aria-hidden="true">★★★★★</div>
+                <p>Lo que más me sorprendió del curso de finanzas fue la naturalidad con la que lo dictan. No se siente como una clase rígida ni llena de tecnicismos; al contrario, explican los conceptos de manera sencilla, con ejemplos prácticos y cercanos a la vida diaria. Esa forma tan fluida de enseñar hace que temas que normalmente parecen complicados se vuelvan claros y hasta entretenidos.</p>
+                <div class="testimonial-author"><strong> José Tulio</strong></div>
+            </div>
+            <div class="testimonial-card">
+                <div class="stars" aria-hidden="true">★★★★★</div>
+                <p>La manera en que se explica el contenido. Es como charlar con una amiga y de un tema sencillo (aunque para mi siempre me había parecido muy complejo el tema). Además, que explican cosas muy básicas, no se asume que ya hay términos que se conocen (porque en mi caso incluso había algún concepto equivocado) y empieza a hablar de lo que a la mayoría le interesa sino que lo explica todo (for dummies)</p>
+                <div class="testimonial-author"><strong> María Flores</strong></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features -->
+    <section class="features">
+        <h2>Efecto dominó 😮</h2>
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">📊</div>
+                <h3>Lo hacemos práctico</h3>
+                <p>Constantemente nos vamos a ir al Excel, y creamos 3 personajes ficticios con vidas financieras distintas para que te identifiques y aprendas.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">💡</div>
+                <h3>LO SIMPLIFICAMOS</h3>
+                <p>Mi superpoder es simplificar información compleja y aunque NO sepas nada, vas a entender todo el curso.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">☕</div>
+                <h3>NOS DIVERTIMOS</h3>
+                <p>Nos vamos a servir un cafecito, chismear, disfrutar los videos, las sesiones en vivo y los ejercicios.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Course Content -->
+    <section id="course-content" class="course-content">
+        <p class="highlight-text">Es hora de tomar el control y buscar construir patrimonio.</p>
+        <h2>Finanzas personales INTELIGENTES 2.0</h2>
+        <p class="intro">Un curso diseñado para lograr la verdadera libertad financiera, construir un patrimonio, vivir en paz y aumentar tu nivel de vida de forma inteligente.</p>
+        <a href="https://www.google.com/" class="cta-button">Es para mi</a>
+        
+        <h2 style="margin-top: 80px; margin-bottom: 40px;">Contenido del curso</h2>
+        <div class="modules-grid">
+            <div class="module-card">
+                <h3>BIENVENIDA Y DETALLES DE LA PLATAFORMA</h3>
+                <p>Nos vamos a conocer, entender cómo funciona Hotmart y cómo nos vamos a comunicar.</p>
+            </div>
+            <div class="module-card">
+                <h3>FUNDAMENTOS Y MENTALIDAD</h3>
+                <p>Este módulo es para que hablemos el mismo idioma, definamos los fundamentos y la mentalidad a largo plazo.</p>
+            </div>
+            <div class="module-card">
+                <h3>INGRESOS Y AHORROS</h3>
+                <p>En este módulo vamos a entender qué son los ingresos, cuánto debemos de ahorrar y cómo generar más.</p>
+            </div>
+            <div class="module-card">
+                <h3>TUS GASTOS</h3>
+                <p>Aprenderás la metodología para controlar tus gastos de forma consistente pero sin estrés innecesario y a aumentarlos de forma inteligente poco a poco.</p>
+            </div>
+            <div class="module-card">
+                <h3>TU DEUDA</h3>
+                <p>Entiende el impacto de la deuda, cómo gestionarla de forma inteligente y dejar de caer en ella.</p>
+                     </div>
+        <div class="modules-grid">
+            <div class="module-card">
+                <h3>Tus inversiones</h3>
+                <p>Descubre cómo invertir de forma inteligente, entender riesgos, rendimientos y construir ingresos pasivos efectivos.</p>
+            </div>
+            <!-- Aquí puedes añadir los módulos del curso como .module-card -->
+        </div>
+
+    </section> <!-- .course-content -->
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-inner">
+            <div class="logo">MACA RIVA</div>
+
+            <nav class="footer-nav" aria-label="Enlaces del sitio">
+                <a href="#benefits">Beneficios</a>
+                <a href="#course-content">Contenido</a>
+                <a href="#testimonials">Testimonios</a>
+                <a href="#pricing">Precio</a>
+            </nav>
+
+            <div class="footer-contact">
+                <div>Contacto: hola@maca.com</div>
+                <div class="social-links" aria-hidden="false">
+                    <a href="#" aria-label="Instagram">📷</a>
+                    <a href="#" aria-label="YouTube">▶️</a>
+                    <a href="#" aria-label="TikTok">🎵</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom"> 2025 Maca Riva — Finanzas Personales Inteligentes. Todos los derechos reservados.</div>
+    </footer>
+
+</body>
+</html>
